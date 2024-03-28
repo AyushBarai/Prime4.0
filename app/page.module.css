@@ -51,10 +51,4 @@
   object-fit: cover; /* Cover the entire container */
 }
 
-@media (max-width: 768px) {
-  .video {
-    object-fit: contain; /* Maintain aspect ratio and fit inside container */
-    object-position: center; /* Center the video horizontally and vertically */
-    height: auto; /* Allow height to adjust based on video's aspect ratio */
-  }
-}
+
