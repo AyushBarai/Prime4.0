@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { React, useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { digitalfirst } from "@/constants";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -8,7 +8,23 @@ export function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   const [isclikk, setIsclikk] = useState(false);
-  const [hamClick, sethamClick] = useState(false);
+  const [isServiceSubMenuOpen, setIsServiceSubMenuOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+        setIsServiceSubMenuOpen(false);
+      }
+    }
+
+    document.body.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.body.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
 
   let timeoutId;
 
@@ -60,14 +76,13 @@ export function Navbar() {
           >
             Home
           </Link>
-          <Link
+          <button
             className={`text-sm relative inline-block font-medium underline-offset-4 ${
               isHovering || isclikk ? "text-red-600 font-bold" : ""
             }`}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             onClick={() => setIsclikk(!isclikk)}
-            href="/"
           >
             Services
             {isDropdownOpen && (
@@ -87,7 +102,7 @@ export function Navbar() {
                 ))}
               </div>
             )}
-          </Link>
+          </button>
           <Link
             className="font-medium hover:underline underline-offset-4"
             href="./teampage"
@@ -104,37 +119,61 @@ export function Navbar() {
           </Link>
         </nav>
         <nav className="md:hidden space-x-10 ">
-          {/* <button onClick={() => sethamClick(!hamClick)}>
-            <MenuIcon />
-          </button> */}
-          <Link
-            className={`text-sm relative inline-block font-medium underline-offset-4 ${
-              isHovering || isclikk ? "text-red-600 font-bold" : ""
-            }`}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            onClick={() => setIsclikk(!isclikk)}
-            href="/"
-          >
-            <MenuIcon></MenuIcon>
+          <div className="relative inline-block" ref={dropdownRef}>
+            <button
+              className={`text-sm font-medium underline-offset-4 ${
+                isHovering || isclikk ? "text-red-600 font-bold" : ""
+              }`}
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+            >
+              <MenuIcon sx={{ color: "goldenrod", fontSize: "40px" }} />
+            </button>
             {isDropdownOpen && (
-              <div className="absolute top-full left-0 mt-2 w-40 bg-white  shadow-lg">
-                {digitalfirst.map((item) => (
-                  <div key={item.title}>
-                    {item.links.map((link) => (
-                      <Link
-                        key={link.title}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                        href={link.url}
-                      >
-                        {link.title}
-                      </Link>
-                    ))}
+              <div className="absolute top-full right-0 mt-2 w-40 bg-white shadow-lg">
+                <div className="flex flex-col">
+                  <Link
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    href="/"
+                  >
+                    Home
+                  </Link>
+                  <Link
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    href="/teampage"
+                  >
+                    Team
+                  </Link>
+                  <div className="relative">
+                    <button
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      onClick={() =>
+                        setIsServiceSubMenuOpen(!isServiceSubMenuOpen)
+                      }
+                    >
+                      Services
+                    </button>
+                    {isServiceSubMenuOpen && (
+                      <div className="absolute top-0 right-full mt-0 ml-2 w-40 bg-white shadow-lg">
+                        {digitalfirst.map((item) => (
+                          <div key={item.title}>
+                            {item.links.map((link) => (
+                              <Link
+                                key={link.title}
+                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                href={link.url}
+                              >
+                                {link.title}
+                              </Link>
+                            ))}
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
-                ))}
+                </div>
               </div>
             )}
-          </Link>
+          </div>
         </nav>
       </header>
     </div>
