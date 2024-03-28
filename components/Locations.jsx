@@ -25,7 +25,13 @@ export function Locations() {
 
   return (
     <div className="w-full overflow-hidden bg-[#FDF5DF]">
-      <div className="w-[auto] h-auto hidden" />
+      <div className="w-[auto] h-auto hidden " />
+      <div className="flex justify-center text-4xl font-bold mt-[4rem]">
+        With over a decade of experience
+      </div>
+      <div className="flex justify-center text-4xl font-bold ">
+        We make it REAL
+      </div>
       <section className="container mx-auto px-8 pt-10 sm:px-16 lg:px-24 ">
         <h1 className="text-4xl font-semibold ">Our Global Presence</h1>
       </section>

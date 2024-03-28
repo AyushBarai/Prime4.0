@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { about, digitalfirst, insights } from "@/constants";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 export function Footer() {
   return (
@@ -93,12 +94,13 @@ export function Footer() {
               <div className="self-stretch flex flex-row items-start justify-start py-0 pr-0 pl-3">
                 <div className="h-[46px] flex-1 flex flex-row items-start justify-start gap-[9px]">
                   <div className="h-[46px] flex flex-col items-start justify-start pt-0.5 px-0 pb-0 box-border">
-                    <img
+                    {/* <img
                       className="w-11 h-11 relative"
                       loading="lazy"
                       alt=""
                       src="/ellipse.svg"
-                    />
+                    /> */}
+                    <InstagramIcon />
                   </div>
                   <img
                     className="h-11 w-11 relative"

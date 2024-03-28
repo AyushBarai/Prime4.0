@@ -52,7 +52,7 @@ export function Navbar() {
   };
   return (
     <div className="flex flex-col bg-gray-50">
-      <header className="px-4 lg:px-6 h-[80px] flex items-center justify-center hover:bg-indigo-500/50 bg-white">
+      <header className="px-4 lg:px-6 h-[80px] flex items-center justify-between hover:bg-indigo-500/50 bg-white">
         <nav className="flex items-center space-x-2 navbar_company">
           <Link href="/" className="navbar_company flex items-center">
             <img
@@ -69,7 +69,7 @@ export function Navbar() {
             </h1>
           </Link>
         </nav>
-        <nav className="text-sm text-bold ml-auto md:ml-[330px]  md:flex gap-4 sm:gap-6 justify-center object-center hidden md:block ">
+        <nav className="text-sm text-bold ml-auto md:flex gap-4 sm:gap-6 justify-end items-center hidden">
           <Link
             className="text-sm text-bold font-medium hover:underline underline-offset-4 "
             href="/"
@@ -109,8 +109,6 @@ export function Navbar() {
           >
             Team
           </Link>
-        </nav>
-        <nav className="text-sm text-bold ml-auto flex gap-4 sm:gap-6 justify-end">
           <Link
             className="font-medium hover:underline underline-offset-4 rounded-full px-4 py-2 bg-blue-500 text-white"
             href="./contactpage"
