@@ -195,11 +195,6 @@ export function Contact() {
           </p>
         </div>
       </div>
-
-      <div className="flex justify-center font-semibold ">
-        With over a decade of experience
-      </div>
-      <div className="flex justify-center font-semibold">We make it REAL</div>
     </>
   );
 }
