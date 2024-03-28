@@ -24,20 +24,15 @@ export function Locations() {
   };
 
   return (
-    <div className="w-full overflow-hidden bg-[#FDF5DF]">
-      <div className="w-[auto] h-auto hidden " />
-      <div className="flex justify-center text-4xl font-bold mt-[4rem]">
-        With over a decade of experience
-      </div>
-      <div className="flex justify-center text-4xl font-bold ">
-        We make it REAL
-      </div>
-      <section className="container mx-auto px-8 pt-10 sm:px-16 lg:px-24 ">
-        <h1 className="text-4xl font-semibold ">Our Global Presence</h1>
+    <div className="w-full overflow-hidden bg-[#FDF5DF] border-t border-b pb-[6rem] ">
+      <section className="w-full pt-[4rem] ">
+              <h2 className="text-3xl font-bold text-center md:text-5xl">
+                Our Global Presence
+              </h2>
       </section>
-      <section className="container mx-auto grid grid-cols-3 py-12 md:py-24 lg:py-32 px-4 sm:px-8 lg:px-16">
+      <section className="container  md:mx-auto md:grid md:grid-cols-3 md:pt-[4rem] lg:pt-[6rem] px-4 sm:px-8 lg:px-16 flex flex-col">
         {locations.map((location, index) => (
-          <div key={index} className="flex flex-col mb-8 mx-5">
+          <div key={index} className="flex flex-col mb-2 p-3 ">
             <h2 className="text-xl font-semibold mb-2">{location.name}</h2>
             <div className="text-sm text-gray-600">
               <p>{location.address}</p>
