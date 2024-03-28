@@ -25,10 +25,16 @@ export function Locations() {
 
   return (
     <div className="w-full overflow-hidden bg-[#FDF5DF] border-t border-b pb-[6rem] ">
+      <div className="flex justify-center text-4xl font-bold mt-[4rem]">
+        With over a decade of experience
+      </div>
+      <div className="flex justify-center text-4xl font-bold ">
+        We make it REAL
+      </div>
       <section className="w-full pt-[4rem] ">
-              <h2 className="text-3xl font-bold text-center md:text-5xl">
-                Our Global Presence
-              </h2>
+        <h2 className="text-3xl font-bold text-center md:text-5xl">
+          Our Global Presence
+        </h2>
       </section>
       <section className="container  md:mx-auto md:grid md:grid-cols-3 md:pt-[4rem] lg:pt-[6rem] px-4 sm:px-8 lg:px-16 flex flex-col">
         {locations.map((location, index) => (
