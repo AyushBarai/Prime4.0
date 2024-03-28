@@ -126,7 +126,7 @@ export function Navbar() {
               }`}
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             >
-              <MenuIcon sx={{ color: "redrod", fontSize: "40px" }} />
+              <MenuIcon sx={{ color: "goldenrod", fontSize: "40px" }} />
             </button>
             {isDropdownOpen && (
               <div className="absolute top-full right-0 mt-2 w-40 bg-white shadow-lg">

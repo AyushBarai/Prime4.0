@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 6rem;
   height: 100vh;
 }
 
@@ -48,12 +49,4 @@
   width: 100%;
   height: 100vh; /* Set height to match viewport height */
   object-fit: cover; /* Cover the entire container */
-}
-
-@media (max-width: 768px) {
-  .video {
-    object-fit: contain; /* Maintain aspect ratio and fit inside container */
-    object-position: center; /* Center the video horizontally and vertically */
-    height: auto; /* Allow height to adjust based on video's aspect ratio */
-  }
 }
