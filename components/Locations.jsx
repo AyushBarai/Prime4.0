@@ -29,9 +29,9 @@ export function Locations() {
       <section className="container mx-auto px-8 pt-10 sm:px-16 lg:px-24 ">
         <h1 className="text-4xl font-semibold ">Our Global Presence</h1>
       </section>
-      <section className="container mx-auto grid grid-cols-2 py-12 md:py-24 lg:py-32 px-4 sm:px-8 lg:px-16">
+      <section className="container mx-auto grid grid-cols-3 py-12 md:py-24 lg:py-32 px-4 sm:px-8 lg:px-16">
         {locations.map((location, index) => (
-          <div key={index} className="flex flex-col mb-8">
+          <div key={index} className="flex flex-col mb-8 mx-5">
             <h2 className="text-xl font-semibold mb-2">{location.name}</h2>
             <div className="text-sm text-gray-600">
               <p>{location.address}</p>
