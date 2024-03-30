@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { about, digitalfirst, insights } from "@/constants";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import EmailIcon from "@mui/icons-material/Email";
 
 export function Footer() {
   return (
@@ -94,36 +97,19 @@ export function Footer() {
               <div className="self-stretch flex flex-row items-start justify-start py-0 pr-0 pl-3">
                 <div className="h-[46px] flex-1 flex flex-row items-start justify-start gap-[9px]">
                   <div className="h-[46px] flex flex-col items-start justify-start pt-0.5 px-0 pb-0 box-border">
-                    {/* <img
-                      className="w-11 h-11 relative"
-                      loading="lazy"
-                      alt=""
-                      src="/ellipse.svg"
-                    /> */}
+                    <LinkedInIcon />
+                  </div>
+                  <div className="h-[46px] flex flex-col items-start justify-start pt-0.5 px-0 pb-0 box-border">
                     <InstagramIcon />
                   </div>
-                  <img
-                    className="h-11 w-11 relative"
-                    loading="lazy"
-                    alt=""
-                    src="/ellipse.svg"
-                  />
-                  <img
-                    className="h-11 w-11 relative"
-                    loading="lazy"
-                    alt=""
-                    src="/ellipse.svg"
-                  />
+                  <div className="h-[46px] flex flex-col items-start justify-start pt-0.5 px-0 pb-0 box-border">
+                    <FacebookIcon />
+                  </div>
+                  <div className="h-[46px] flex flex-col items-start justify-start pt-0.5 px-0 pb-0 box-border">
+                    <EmailIcon />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="h-[46px] flex flex-col items-start justify-end pt-0 px-0 pb-0.5 box-border">
-              <img
-                className="w-11 h-11 relative"
-                loading="lazy"
-                alt=""
-                src="/ellipse.svg"
-              />
             </div>
           </div>
         </div>
