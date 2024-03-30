@@ -5,9 +5,9 @@ export function Application() {
     <div className="flex flex-col ">
       <main className="flex flex-col justify-center items-center ">
         <section
-          className="w-full py-12 md:py-24 lg:py-32 xl:py-48 relative z-[-1]"
+          className="w-full py-12 md:py-24 lg:py-32 xl:py-48 relative z-[-1] top-0"
           style={{
-            backgroundImage: 'url("./Designer3.png")',
+            backgroundImage: 'url("/Designer.png")',
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -53,7 +53,7 @@ export function Application() {
           <div className="hidden md:block">
             <img
               className="object-cover w-full h-full"
-              src="./Designer3.png"
+              src="/Designer.png"
               alt="Image"
             />
           </div>

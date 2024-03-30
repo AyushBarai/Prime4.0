@@ -1,8 +1,13 @@
+"use client";
 import { Hero } from "@/components/Hero";
 import { Intelops } from "@/components/Intelops";
 import styles from "./page.module.css";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function Home() {
+  const [isclikk, setIsclikk] = useState(false);
+
   return (
     <div>
       <main className={styles.main}>
@@ -15,11 +20,13 @@ export default function Home() {
             It Solutions.
           </p>
           <div className={styles.buttons}>
-            <button>Contact Us</button>
+            <button onClick={() => setIsclikk(!isclikk)}>
+              <Link href="./contactpage">Contact Us</Link>
+            </button>
           </div>
         </div>
         <video
-          src={require("../public/bgvideo.mp4")}
+          src={require("../public/bg2.mp4")}
           autoPlay
           muted
           loop

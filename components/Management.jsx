@@ -7,7 +7,7 @@ export function Management() {
         <section
           className="w-full py-12 md:py-24 lg:py-32 xl:py-48 relative z-[-1]"
           style={{
-            backgroundImage: 'url("./Designer3.png")',
+            backgroundImage: 'url("/Designer3.png")',
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -53,7 +53,7 @@ export function Management() {
           <div className="hidden md:block">
             <img
               className="object-cover w-full h-full"
-              src="./Designer3.png"
+              src="/Designer3.png"
               alt="Image"
             />
           </div>

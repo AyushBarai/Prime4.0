@@ -15,7 +15,7 @@ export const digitalfirst = [
   {
     title: "Digital First",
     links: [
-      { title: "Intelligeni Automated Ops", url: "./sp/intelopspage" },
+      { title: "Automated Ops", url: "./sp/intelopspage" },
       { title: "Hybrid Cloud Services", url: "./sp/hybridpage" },
       { title: "Networks", url: "./sp/networkpage" },
       { title: "Digital Workplace", url: "./sp/digitalpage" },
