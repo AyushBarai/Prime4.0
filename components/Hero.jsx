@@ -14,7 +14,7 @@ import {
 
 export function Hero() {
   return (
-    <div className="flex flex-col min-h-[100dvh]">
+    <div className="flex flex-col min-h-[100dvh] overflow-hidden">
       <main>
         <section class="bg-white py-8 sm:py-12 z-[-1]">
           <div class="mx-auto max-w-7xl px-6 lg:px-8">
@@ -219,7 +219,7 @@ export function Hero() {
           </div>
         </section>
 
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-emerald-800">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-[#00df9a]">
           <div className=" grid items-center justify-center gap-4 px-4 text-center md:px-6">
             <div className="space-y-3">
               <h2 className="text-2xl font-bold text-center sm:text-5xl md:text-6xl/none mx-auto max-w-[1100px] text-white uppercase bg-green">

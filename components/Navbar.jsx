@@ -117,22 +117,22 @@ export function Navbar() {
     setIsHovering(false);
   };
   return (
-    <div className={"flex flex-col bg-black sticky top-0"}>
-      <header className="px-4 lg:px-6 h-[80px] flex items-center justify-between bg-white/0 transition duration-300 ease-out hover:bg-blue-500/50 text-white">
-        <nav className="flex items-center space-x-2 navbar_company">
+    <div className={"flex flex-col bg-black sticky top-0 overflow-hidden"}>
+      <header className="px-4 lg:px-6 h-[80px] flex items-center pr-[2rem] justify-between bg-white/0 transition duration-300 ease-out hover:bg-blue-500/50 text-white">
+        <nav className="flex items-center space-x-2 navbar_company ">
           <Link href="/" className="navbar_company flex items-center">
-            <img
-              src="/Logo2.png"
-              alt="Prime IT Solutions"
-              className="h-14 w-14 mr-2"
-            />
-            <h1 className="text-2xl font-bold hidden md:block items-center">
-              Prime Group Technologies
-              <br />
-              <span className="text-l text-black-600 pt-[-10rem]">
-                Innovate Initiate and Inspire
-              </span>
-            </h1>
+            <div className="hidden md:block">
+              <img
+                src="artboard2.png"
+                alt="Artboard 2"
+                className="h-12 w-[30rem]"
+              />
+            </div>
+          </Link>
+          <Link href="/" className="navbar_company flex items-center">
+            <div className="md:hidden">
+              <img src="Logo2.png" alt="Logo 2" className="h-14 w-14 mr-2" />
+            </div>
           </Link>
         </nav>
 
@@ -147,30 +147,16 @@ export function Navbar() {
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Services</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid gap-3 p-4 md:w-[30vh] md:grid-cols-1 lg:w-[600px] ">
-                    {digitalfirst.map((item) => (
-                      <div key={item.title}>
-                        {item.links.map((link) => (
-                          <Link
-                            key={link.title}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            href={link.url}
-                          >
-                            {link.title}
-                          </Link>
-                        ))}
-                      </div>
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <Link href="./teampage" legacyBehavior passHref>
+                <Link href="/" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Team
+                    Services
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="./about" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    About Us
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -178,10 +164,10 @@ export function Navbar() {
           </NavigationMenu>
 
           <Link
-            className="font-medium hover:underline underline-offset-4 px-4 py-2  text-white"
+            className="font-medium hover:underline underline-offset-4 px-4 py-2  text-black"
             href="./contactpage"
           >
-            <Button variant="contained rounded-full" className="bg-black">
+            <Button variant="contained rounded-full" className="bg-[#00df9a]">
               Contact
             </Button>
           </Link>
@@ -189,7 +175,7 @@ export function Navbar() {
         <nav className="md:hidden space-x-10 ">
           <div className="relative inline-block" ref={dropdownRef}>
             <Link
-              className="font-medium item-center hover:underline underline-offset-4 rounded-full px-4 py-2 bg-[#007f73] text-white"
+              className="font-medium item-center hover:underline underline-offset-4 rounded-full px-4 py-2 bg-[#00df9a] text-black"
               href="./contactpage"
             >
               Contact
@@ -214,9 +200,9 @@ export function Navbar() {
                   </Link>
                   <Link
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                    href="/teampage"
+                    href="/about"
                   >
-                    Team
+                    About
                   </Link>
                   <div className="relative">
                     <button

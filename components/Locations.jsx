@@ -24,7 +24,7 @@ export function Locations() {
   };
 
   return (
-    <div className="w-full overflow-hidden bg-[#FDF5DF] border-t border-b pb-[6rem] text-black ">
+    <div className="w-full overflow-hidden bg-[] border-t border-b pb-[6rem] text-black ">
       <div className="flex justify-center text-center text-4xl font-bold mt-[4rem] ">
         With over a decade of experience
       </div>

@@ -37,7 +37,7 @@
 
 .buttons button:hover {
   background-color: white;
-  color: black;
+  color: white/50;
   transition: 0.25s background-color;
   cursor: pointer;
 }

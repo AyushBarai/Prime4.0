@@ -1,0 +1,53 @@
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  min-height: 100vh;
+}
+
+.contents h1 {
+  text-transform: uppercase;
+  color: black;
+  letter-spacing: 1.5rem;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.buttons button {
+  padding: 1.5rem 2rem;
+  margin: 0 1rem;
+  background-color: transparent;
+  border: solid black 1px;
+  font-size: 12px;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  transition: 0.25s background-color;
+}
+
+.buttons button:hover {
+  background-color: black;
+  color: black;
+  transition: 0.25s background-color;
+  cursor: pointer;
+}
+
+.video {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  width: 100%;
+  height: 120vh; /* Set height to match viewport height */
+  min-height: 100vh;
+  object-fit: cover; /* Cover the entire container */
+}
