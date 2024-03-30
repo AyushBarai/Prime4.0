@@ -24,24 +24,28 @@ export function Locations() {
   };
 
   return (
-    <div className="w-full overflow-hidden bg-[#FDF5DF] border-t border-b pb-[6rem] ">
-      <div className="flex justify-center text-4xl font-bold mt-[4rem]">
+    <div className="w-full overflow-hidden bg-[#FDF5DF] border-t border-b pb-[6rem] text-black ">
+      <div className="flex justify-center text-center text-4xl font-bold mt-[4rem] ">
         With over a decade of experience
       </div>
-      <div className="flex justify-center text-4xl font-bold ">
+      <div className="flex justify-center text-center text-4xl font-bold">
         We make it REAL
       </div>
       <section className="w-full pt-[4rem] ">
-        <h2 className="text-3xl font-bold text-center md:text-5xl">
+        <h2 className="text-3xl font-bold text-center md:text-5xl underline">
           Our Global Presence
         </h2>
       </section>
-      <section className="container  md:mx-auto md:grid md:grid-cols-3 md:pt-[4rem] lg:pt-[6rem] px-4 sm:px-8 lg:px-16 flex flex-col">
+      <section className="container items-center text-center item-center md:mx-auto md:grid md:grid-cols-3 md:pt-[3rem] lg:pt-[5rem] px-4 pt-[1rem] lg:px-16 ">
         {locations.map((location, index) => (
           <div key={index} className="flex flex-col mb-2 p-3 ">
-            <h2 className="text-xl font-semibold mb-2">{location.name}</h2>
+            {location.ishead && <h2 style={{ color: "red" }}>HEADQUARTER</h2>}
+            {!location.ishead && (
+              <h2 style={{ color: "#FDF5DF" }}>HEADQUARTER</h2>
+            )}
+            <h2 className="text-xl font-semibold mb-2">{location.country}</h2>
             <div className="text-sm text-gray-600">
-              <p>{location.address}</p>
+              <h2 className="text-xl font-semibold mb-2">{location.city}</h2>
               <p>
                 <a
                   className="underline"

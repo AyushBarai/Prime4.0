@@ -3,15 +3,24 @@ import { React, useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { digitalfirst } from "@/constants";
 import MenuIcon from "@mui/icons-material/Menu";
+import Button from "@mui/material/Button";
 
 export function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   const [isclikk, setIsclikk] = useState(false);
   const [isServiceSubMenuOpen, setIsServiceSubMenuOpen] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
   const dropdownRef = useRef(null);
 
   useEffect(() => {
+    function handleScroll() {
+      const currentScrollPos = window.pageYOffset;
+      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+      setPrevScrollPos(currentScrollPos);
+    }
+
     function handleClickOutside(event) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setIsDropdownOpen(false);
@@ -20,11 +29,13 @@ export function Navbar() {
     }
 
     document.body.addEventListener("click", handleClickOutside);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
       document.body.removeEventListener("click", handleClickOutside);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [prevScrollPos]);
 
   let timeoutId;
 
@@ -51,8 +62,12 @@ export function Navbar() {
     setIsHovering(false);
   };
   return (
-    <div className="flex flex-col bg-gray-50">
-      <header className="px-4 lg:px-6 h-[80px] flex items-center justify-between hover:bg-indigo-500/50 bg-white">
+    <div
+      className={`flex flex-col bg-black bg-opacity-25 sticky top-0 ${
+        visible ? "" : "hidden"
+      }`}
+    >
+      <header className="px-4 lg:px-6 h-[80px] flex items-center justify-between bg-white/0 transition duration-300 ease-out hover:bg-blue-500/50 text-white">
         <nav className="flex items-center space-x-2 navbar_company">
           <Link href="/" className="navbar_company flex items-center">
             <img
@@ -60,11 +75,11 @@ export function Navbar() {
               alt="Prime IT Solutions"
               className="h-14 w-14 mr-2"
             />
-            <h1 className="text-xl font-bold hidden md:block">
+            <h1 className="text-4xl font-bold hidden md:block items-center">
               Prime Group Technologies
               <br />
-              <span className="text-sm text-gray-600">
-                Initiate Innovate Integrate
+              <span className="text-4xl text-black-600 pt-[-10rem]">
+                We Innovate Initiate and Inspire
               </span>
             </h1>
           </Link>
@@ -86,7 +101,7 @@ export function Navbar() {
           >
             Services
             {isDropdownOpen && (
-              <div className="absolute top-full left-0 mt-2 w-40 bg-white  shadow-lg">
+              <div className="absolute top-full left-0 mt-2 w-40 bg-black  shadow-lg">
                 {digitalfirst.map((item) => (
                   <div key={item.title}>
                     {item.links.map((link) => (
@@ -110,16 +125,25 @@ export function Navbar() {
             Team
           </Link>
           <Link
-            className="font-medium hover:underline underline-offset-4 rounded-full px-4 py-2 bg-blue-500 text-white"
+            className="font-medium hover:underline underline-offset-4 px-4 py-2  text-white"
             href="./contactpage"
           >
-            Contact
+            <Button variant="contained rounded-full" className="bg-black">
+              Contact
+            </Button>
           </Link>
         </nav>
         <nav className="md:hidden space-x-10 ">
           <div className="relative inline-block" ref={dropdownRef}>
+            <Link
+              className="font-medium item-center hover:underline underline-offset-4 rounded-full px-4 py-2 bg-[#007f73] text-white"
+              href="./contactpage"
+            >
+              Contact
+            </Link>
+
             <button
-              className={`text-sm font-medium underline-offset-4 ${
+              className={`text-sm font-medium item-center underline-offset-4 ${
                 isHovering || isclikk ? "text-red-600 font-bold" : ""
               }`}
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
