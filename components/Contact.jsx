@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { React, useRef, useState } from "react";
-import bgform from "../public/large.jpg";
+import bgform from "../public/Snapshot_75cont.png";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 export function Contact() {

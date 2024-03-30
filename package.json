@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
+    ,"llcc": "next dev -H 127.0.0.1"
   },
   "dependencies": {
     "@emotion/cache": "^11.11.0",

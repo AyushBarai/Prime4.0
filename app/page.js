@@ -11,10 +11,10 @@ export default function Home() {
     <div>
       <main className={styles.main}>
         <div className={styles.contents}>
-          <h1 className="text-4xl font-bold tracking-tighter text-white sm:text-5xl md:text-8xl/none">
+          <h1 className="text-4xl font-bold tracking-tighter text-white sm:text-5xl md:text-8xl/none p-7">
             Digitize The World
           </h1>
-          <p className="justify-center text-white md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+          <p className="justify-center text-white md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed p-7">
             We help businesses transform through technology. Through our Digital
             It Solutions.
           </p>

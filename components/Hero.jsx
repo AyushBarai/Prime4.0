@@ -11,12 +11,14 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import {Cards} from "@/components/Cards"
+import { Myservice } from "./myservice";
 
 export function Hero() {
   return (
-    <div className="flex flex-col min-h-[100dvh] overflow-hidden">
+    <div className="flex flex-col min-h-[100dvh]">
       <main>
-        <section class="bg-white py-8 sm:py-12 z-[-1]">
+        {/* <section class="bg-white py-8 sm:py-12 z-[-1]">
           <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="mx-auto max-w-2xl lg:text-center">
               <h2 class="text-base font-semibold leading-7 text-indigo-600">
@@ -217,9 +219,10 @@ export function Hero() {
               </dl>
             </div>
           </div>
-        </section>
-
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-[#00df9a]">
+      
+        </section> */}
+        <Myservice></Myservice>
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-emerald-800">
           <div className=" grid items-center justify-center gap-4 px-4 text-center md:px-6">
             <div className="space-y-3">
               <h2 className="text-2xl font-bold text-center sm:text-5xl md:text-6xl/none mx-auto max-w-[1100px] text-white uppercase bg-green">
