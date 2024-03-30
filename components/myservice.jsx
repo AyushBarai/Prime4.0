@@ -1,95 +1,133 @@
 
 import { Button } from "@/components/ui/button"
 import { CardContent, Card } from "@/components/ui/card"
+import Link from "next/link";
 
 export function Myservice() {
   return (
     (<div className="bg-white p-8">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900">Industries we serve</h2>
-        <p className="mt-4 text-gray-600">
-          With an extensive list of great quality and ecological options, you'll be able to find the perfect finish for
-          your spaces.
-        </p>
-        <div className="mt-8 flex justify-end">
-          <Button className="bg-black text-white">Get in touch</Button>
-        </div>
-        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <Card className="bg-[#FDE68A]">
-            <CardContent>
-              <DollarSignIcon className="text-black" />
-              <h3 className="mt-4 text-lg font-semibold text-gray-900">Banking Assist GPT</h3>
-              <p className="mt-2 text-sm text-gray-600">
-                Your vision, our expertise.
-                <br />
-                We can create any desired pattern, motif and style.
-              </p>
-              <Button className="mt-4">Try demo</Button>
-            </CardContent>
-          </Card>
-          <Card className="bg-[#FECACA]">
-            <CardContent>
-              <HeartIcon className="text-black" />
-              <h3 className="mt-4 text-lg font-semibold text-gray-900">Healthcare Assist GPT</h3>
-              <p className="mt-2 text-sm text-gray-600">
-                Your vision, our expertise.
-                <br />
-                We can create any desired pattern, motif and style.
-              </p>
-              <Button className="mt-4">Try demo</Button>
-            </CardContent>
-          </Card>
-          <Card className="bg-[#A7F3D0]">
-            <CardContent>
-              <GroupIcon className="text-black" />
-              <h3 className="mt-4 text-lg font-semibold text-gray-900">HR Nexus GPT</h3>
-              <p className="mt-2 text-sm text-gray-600">
-                Your vision, our expertise.
-                <br />
-                We can create any desired pattern, motif and style.
-              </p>
-              <Button className="mt-4">Try demo</Button>
-            </CardContent>
-          </Card>
-          <Card className="bg-[#BFDBFE]">
-            <CardContent>
-              <DollarSignIcon className="text-black" />
-              <h3 className="mt-4 text-lg font-semibold text-gray-900">Banking Assist GPT</h3>
-              <p className="mt-2 text-sm text-gray-600">
-                Your vision, our expertise.
-                <br />
-                We can create any desired pattern, motif and style.
-              </p>
-              <Button className="mt-4">Try demo</Button>
-            </CardContent>
-          </Card>
-          <Card className="bg-[#FBCFE8]">
-            <CardContent>
-              <HeartIcon className="text-black" />
-              <h3 className="mt-4 text-lg font-semibold text-gray-900">Healthcare Assist GPT</h3>
-              <p className="mt-2 text-sm text-gray-600">
-                Your vision, our expertise.
-                <br />
-                We can create any desired pattern, motif and style.
-              </p>
-              <Button className="mt-4">Try demo</Button>
-            </CardContent>
-          </Card>
-          <Card className="bg-[#FDE68A]">
-            <CardContent>
-              <GroupIcon className="text-black" />
-              <h3 className="mt-4 text-lg font-semibold text-gray-900">HR Nexus GPT</h3>
-              <p className="mt-2 text-sm text-gray-600">
-                Your vision, our expertise.
-                <br />
-                We can create any desired pattern, motif and style.
-              </p>
-              <Button className="mt-4">Try demo</Button>
-            </CardContent>
-          </Card>
-        </div>
+    <div className="max-w-7xl mx-auto">
+      <h2 className="flex justify-center text-3xl font-bold text-gray-900">Solutions & Services</h2>
+      <p className="mt-4 text-gray-600 flex justify-center">
+        With an extensive list of great quality and ecological options, you'll be able to find the perfect finish for
+        your spaces.
+      </p>
+      <div className="mt-8 flex justify-end">
+        <Button className="bg-black text-white"><Link href="./ssp">Get in touch</Link> </Button>
       </div>
-    </div>)
+      <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <Card className="bg-[#FDE68A] p-5">
+          <CardContent>
+            <DollarSignIcon className="text-black" />
+            <h3 className="mt-4 text-lg font-semibold text-gray-900">Banking Assist GPT</h3>
+            <p className="mt-2 text-sm text-gray-600">
+              Your vision, our expertise.
+              <br />
+              We can create any desired pattern, motif and style.
+            </p>
+            <Button className="mt-4">Try demo</Button>
+          </CardContent>
+        </Card>
+        <Card className="bg-[#FECACA] p-5">
+          <CardContent>
+            <HeartIcon className="text-black" />
+            <h3 className="mt-4 text-lg font-semibold text-gray-900">Healthcare Assist GPT</h3>
+            <p className="mt-2 text-sm text-gray-600">
+              Your vision, our expertise.
+              <br />
+              We can create any desired pattern, motif and style.
+            </p>
+            <Button className="mt-4">Try demo</Button>
+          </CardContent>
+        </Card>
+        <Card className="bg-[#A7F3D0] p-5">
+          <CardContent>
+            <GroupIcon className="text-black" />
+            <h3 className="mt-4 text-lg font-semibold text-gray-900">HR Nexus GPT</h3>
+            <p className="mt-2 text-sm text-gray-600">
+              Your vision, our expertise.
+              <br />
+              We can create any desired pattern, motif and style.
+            </p>
+            <Button className="mt-4">Try demo</Button>
+          </CardContent>
+        </Card>
+        <Card className="bg-[#BFDBFE] p-5">
+          <CardContent>
+            <DollarSignIcon className="text-black" />
+            <h3 className="mt-4 text-lg font-semibold text-gray-900">Banking Assist GPT</h3>
+            <p className="mt-2 text-sm text-gray-600">
+              Your vision, our expertise.
+              <br />
+              We can create any desired pattern, motif and style.
+            </p>
+            <Button className="mt-4">Try demo</Button>
+          </CardContent>
+        </Card>
+        <Card className="bg-[#FBCFE8] p-5">
+          <CardContent>
+            <HeartIcon className="text-black" />
+            <h3 className="mt-4 text-lg font-semibold text-gray-900">Healthcare Assist GPT</h3>
+            <p className="mt-2 text-sm text-gray-600">
+              Your vision, our expertise.
+              <br />
+              We can create any desired pattern, motif and style.
+            </p>
+            <Button className="mt-4">Try demo</Button>
+          </CardContent>
+        </Card>
+        <Card className="bg-[#FDE68A] p-5">
+          <CardContent>
+            <GroupIcon className="text-black" />
+            <h3 className="mt-4 text-lg font-semibold text-gray-900">HR Nexus GPT</h3>
+            <p className="mt-2 text-sm text-gray-600">
+              Your vision, our expertise.
+              <br />
+              We can create any desired pattern, motif and style.
+            </p>
+            <Button className="mt-4">Try demo</Button>
+          </CardContent>
+        </Card>
+        <Card className="bg-[#FDE68A] p-5">
+          <CardContent>
+            <DollarSignIcon className="text-black" />
+            <h3 className="mt-4 text-lg font-semibold text-gray-900">Banking Assist GPT</h3>
+            <p className="mt-2 text-sm text-gray-600">
+              Your vision, our expertise.
+              <br />
+              We can create any desired pattern, motif and style.
+            </p>
+            <Button className="mt-4">Try demo</Button>
+          </CardContent>
+        </Card>
+        <Card className="bg-[#A7F3D0] p-5">
+          <CardContent>
+            <GroupIcon className="text-black" />
+            <h3 className="mt-4 text-lg font-semibold text-gray-900">HR Nexus GPT</h3>
+            <p className="mt-2 text-sm text-gray-600">
+              Your vision, our expertise.
+              <br />
+              We can create any desired pattern, motif and style.
+            </p>
+            <Button className="mt-4">Try demo</Button>
+          </CardContent>
+        </Card>
+        <Card className="bg-[#BFDBFE] p-5">
+          <CardContent>
+            <DollarSignIcon className="text-black" />
+            <h3 className="mt-4 text-lg font-semibold text-gray-900">Banking Assist GPT</h3>
+            <p className="mt-2 text-sm text-gray-600">
+              Your vision, our expertise.
+              <br />
+              We can create any desired pattern, motif and style.
+            </p>
+            <Button className="mt-4">Try demo</Button>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  </div>
+  )
   );
 }
 
