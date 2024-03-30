@@ -52,7 +52,7 @@ const items = [
 
 export function Footer() {
   return (
-    <div className="bg-[#000300] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-300">
+    <div className="bg-[#000300] mx-auto py-16 px-4 flex flex-col justify-center items-center md:grid lg:grid-cols-3 gap-8 text-gray-300 text-wrap overflow-hidden ">
       {/* Left section with brand and social icons */}
 
       <div className="lg:col-span-2 flex justify-start gap-5 mt-6">

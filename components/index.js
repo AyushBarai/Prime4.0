@@ -16,6 +16,7 @@ import Application from "./Application";
 import Consulting from "./Consulting";
 import Temp from "./Temp";
 import Contact from "./Contact";
+import About from "./About";
 
 export {
   Team,
