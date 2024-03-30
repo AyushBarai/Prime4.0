@@ -15,82 +15,210 @@ import {
 export function Hero() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <main className="flex-1 flex flex-col justify-center items-center ">
-        <section className="py-12 md:py-24 lg:py-32 ">
-          <h1 className="text-2xl font-bold text-center sm:text-5xl md:text-6xl/none py-8 ">
-            Solutions & Services
-          </h1>
-          <Carousel className="w-[90vw]">
-            <CarouselContent className="-ml-1">
-              {serviceImages.map((src, index) => (
-                <CarouselItem
-                  key={index}
-                  className="pl-1 md:basis-1/2 lg:basis-1/3"
-                >
-                  <div className="p-1">
-                    <Card>
-                      <CardContent className="flex aspect-square items-center justify-center p-6">
-                        <span className="text-2xl font-semibold">
-                          <Image
-                            key={index}
-                            src={src} // Assuming serviceImages contain URLs
-                            alt={`Service Image ${index}`} // Add appropriate alt text
-                            width={800} // Set width according to your design
-                            height={800} // Set height according to your design
-                            className="object-cover h-[8rem] w-[8rem] md:h-[20rem] md:w-[20rem] lg:h-[20rem] lg:w-[20rem] rounded-lg shadow-lg"
-                          />
-                        </span>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
-        </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-opacity-50 bg-indigo-500">
-          <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl/none text-center text-white">
-            OUR LEADERSHIP TEAM
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-6 lg:max-w-none xl:gap-10 text-white">
-            <div className="flex flex-col gap-1">
-              <Image
-                alt="Team member"
-                className="mx-auto rounded-full object-cover overflow-hidden object-center"
-                height="300"
-                src="/Chethan.png"
-                width="300"
-              />
-              <div className="flex flex-col gap-1">
-                <h3 className="text-3xl font-bold tracking-tighter md:text-4xl/tight text-center">
-                  Chethan Jagadeesh
-                </h3>
-                <p className="text-sm mx-auto max-w-[600px]">
-                  Managing Director
-                </p>
-              </div>
+      <main>
+        <section class="bg-white py-8 sm:py-12 z-[-1]">
+          <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl lg:text-center">
+              <h2 class="text-base font-semibold leading-7 text-indigo-600">
+                -------------------------------
+              </h2>
+              <p class=" text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                Solution & Services
+              </p>
+              <p class="mt-6 text-lg leading-8 text-gray-600">
+                Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
+              </p>
             </div>
-            <div className="flex flex-col gap-1">
-              <Image
-                alt="Team member"
-                className="mx-auto rounded-full object-cover object-center overflow-hidden"
-                height="300"
-                src="/Dinesh.png"
-                width="300"
-              />
-              <div className="flex flex-col gap-1">
-                <h3 className="text-3xl font-bold tracking-tighter md:text-4xl/tight text-center">
-                  Dinesh Basavarajappa
-                </h3>
-                <p className="text-sm mx-auto max-w-[600px] ">
-                  Chief Executive Officer
-                </p>
-              </div>
+            <div class="z-[-1] mx-auto mt-8 max-w-2xl sm:mt-20 lg:mt-10 lg:max-w-4xl">
+              <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-3 lg:gap-y-16">
+                <div class="relative pl-16">
+                  <dt class="text-base font-semibold leading-7 text-gray-900">
+                    <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                      <svg
+                        class="h-6 w-6 text-white"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z"
+                        />
+                      </svg>
+                    </div>
+                    Automated Ops
+                  </dt>
+                </div>
+                <div class="relative pl-16">
+                  <dt class="text-base font-semibold leading-7 text-gray-900">
+                    <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                      <svg
+                        class="h-6 w-6 text-white"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z"
+                        />
+                      </svg>
+                    </div>
+                    Hybrid Cloud Services
+                  </dt>
+                </div>
+                <div class="relative pl-16">
+                  <dt class="text-base font-semibold leading-7 text-gray-900">
+                    <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                      <svg
+                        class="h-6 w-6 text-white"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z"
+                        />
+                      </svg>
+                    </div>
+                    Networks
+                  </dt>
+                </div>{" "}
+                <div class="relative pl-16">
+                  <dt class="text-base font-semibold leading-7 text-gray-900">
+                    <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                      <svg
+                        class="h-6 w-6 text-white"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z"
+                        />
+                      </svg>
+                    </div>
+                    Digital Workplace
+                  </dt>
+                </div>{" "}
+                <div class="relative pl-16">
+                  <dt class="text-base font-semibold leading-7 text-gray-900">
+                    <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                      <svg
+                        class="h-6 w-6 text-white"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      ></svg>
+                    </div>
+                    Cybersecurity
+                  </dt>
+                </div>{" "}
+                <div class="relative pl-16">
+                  <dt class="text-base font-semibold leading-7 text-gray-900">
+                    <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                      <svg
+                        class="h-6 w-6 text-white"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z"
+                        />
+                      </svg>
+                    </div>
+                    Industrial IoT
+                  </dt>
+                </div>
+                <div class="relative pl-16">
+                  <dt class="text-base font-semibold leading-7 text-gray-900">
+                    <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                      <svg
+                        class="h-6 w-6 text-white"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"
+                        />
+                      </svg>
+                    </div>
+                    Service Management
+                  </dt>
+                </div>
+                <div class="relative pl-16">
+                  <dt class="text-base font-semibold leading-7 text-gray-900">
+                    <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                      <svg
+                        class="h-6 w-6 text-white"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"
+                        />
+                      </svg>
+                    </div>
+                    Application Services
+                  </dt>
+                </div>
+                <div class="relative pl-16">
+                  <dt class="text-base font-semibold leading-7 text-gray-900">
+                    <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                      <svg
+                        class="h-6 w-6 text-white"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M7.864 4.243A7.5 7.5 0 0119.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 004.5 10.5a7.464 7.464 0 01-1.15 3.993m1.989 3.559A11.209 11.209 0 008.25 10.5a3.75 3.75 0 117.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 01-3.6 9.75m6.633-4.596a18.666 18.666 0 01-2.485 5.33"
+                        />
+                      </svg>
+                    </div>
+                    Consulting Services
+                  </dt>
+                </div>
+              </dl>
             </div>
           </div>
         </section>
+
         <section className="w-full py-12 md:py-24 lg:py-32 bg-emerald-800">
           <div className=" grid items-center justify-center gap-4 px-4 text-center md:px-6">
             <div className="space-y-3">

@@ -3,8 +3,57 @@ import { React, useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { digitalfirst } from "@/constants";
 import MenuIcon from "@mui/icons-material/Menu";
+import { cn } from "@/lib/utils";
 import Button from "@mui/material/Button";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+} from "@/components/ui/navigation-menu";
+import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 
+const components = [
+  {
+    title: "Alert Dialog",
+    href: "/docs/primitives/alert-dialog",
+    description:
+      "A modal dialog that interrupts the user with important content and expects a response.",
+  },
+  {
+    title: "Hover Card",
+    href: "/docs/primitives/hover-card",
+    description:
+      "For sighted users to preview content available behind a link.",
+  },
+  {
+    title: "Progress",
+    href: "/docs/primitives/progress",
+    description:
+      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+  },
+  {
+    title: "Scroll-area",
+    href: "/docs/primitives/scroll-area",
+    description: "Visually or semantically separates content.",
+  },
+  {
+    title: "Tabs",
+    href: "/docs/primitives/tabs",
+    description:
+      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+  },
+  {
+    title: "Tooltip",
+    href: "/docs/primitives/tooltip",
+    description:
+      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+  },
+];
 export function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
@@ -12,13 +61,22 @@ export function Navbar() {
   const [isServiceSubMenuOpen, setIsServiceSubMenuOpen] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
+  const [scrollPending, setScrollPending] = useState(false);
   const dropdownRef = useRef(null);
+  let timeoutId;
 
   useEffect(() => {
     function handleScroll() {
-      const currentScrollPos = window.pageYOffset;
-      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
-      setPrevScrollPos(currentScrollPos);
+      if (!scrollPending) {
+        setScrollPending(true);
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+          const currentScrollPos = window.pageYOffset;
+          setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+          setPrevScrollPos(currentScrollPos);
+          setScrollPending(false);
+        }, 100); // Debounce duration (adjust as needed)
+      }
     }
 
     function handleClickOutside(event) {
@@ -35,10 +93,7 @@ export function Navbar() {
       document.body.removeEventListener("click", handleClickOutside);
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [prevScrollPos]);
-
-  let timeoutId;
-
+  }, [prevScrollPos, scrollPending]);
   const handleMouseEnter = () => {
     clearTimeout(timeoutId);
     setIsDropdownOpen(true);
@@ -62,11 +117,7 @@ export function Navbar() {
     setIsHovering(false);
   };
   return (
-    <div
-      className={`flex flex-col bg-black bg-opacity-25 sticky top-0 ${
-        visible ? "" : "hidden"
-      }`}
-    >
+    <div className={"flex flex-col bg-black sticky top-0"}>
       <header className="px-4 lg:px-6 h-[80px] flex items-center justify-between bg-white/0 transition duration-300 ease-out hover:bg-blue-500/50 text-white">
         <nav className="flex items-center space-x-2 navbar_company">
           <Link href="/" className="navbar_company flex items-center">
@@ -75,55 +126,57 @@ export function Navbar() {
               alt="Prime IT Solutions"
               className="h-14 w-14 mr-2"
             />
-            <h1 className="text-4xl font-bold hidden md:block items-center">
+            <h1 className="text-2xl font-bold hidden md:block items-center">
               Prime Group Technologies
               <br />
-              <span className="text-4xl text-black-600 pt-[-10rem]">
-                We Innovate Initiate and Inspire
+              <span className="text-l text-black-600 pt-[-10rem]">
+                Innovate Initiate and Inspire
               </span>
             </h1>
           </Link>
         </nav>
-        <nav className="text-sm text-bold ml-auto md:flex gap-4 sm:gap-6 justify-end items-center hidden">
-          <Link
-            className="text-sm text-bold font-medium hover:underline underline-offset-4 "
-            href="/"
-          >
-            Home
-          </Link>
-          <button
-            className={`text-sm relative inline-block font-medium underline-offset-4 ${
-              isHovering || isclikk ? "text-red-600 font-bold" : ""
-            }`}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            onClick={() => setIsclikk(!isclikk)}
-          >
-            Services
-            {isDropdownOpen && (
-              <div className="absolute top-full left-0 mt-2 w-40 bg-black  shadow-lg">
-                {digitalfirst.map((item) => (
-                  <div key={item.title}>
-                    {item.links.map((link) => (
-                      <Link
-                        key={link.title}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                        href={link.url}
-                      >
-                        {link.title}
-                      </Link>
+
+        <nav className="text-sm text-bold ml-auto md:flex gap-4 sm:gap-6 justify-end items-center hidden text-black ">
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <Link href="/" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Home
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid gap-3 p-4 md:w-[30vh] md:grid-cols-1 lg:w-[600px] ">
+                    {digitalfirst.map((item) => (
+                      <div key={item.title}>
+                        {item.links.map((link) => (
+                          <Link
+                            key={link.title}
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                            href={link.url}
+                          >
+                            {link.title}
+                          </Link>
+                        ))}
+                      </div>
                     ))}
-                  </div>
-                ))}
-              </div>
-            )}
-          </button>
-          <Link
-            className="font-medium hover:underline underline-offset-4"
-            href="./teampage"
-          >
-            Team
-          </Link>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <Link href="./teampage" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Team
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+
           <Link
             className="font-medium hover:underline underline-offset-4 px-4 py-2  text-white"
             href="./contactpage"
