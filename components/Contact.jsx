@@ -57,14 +57,16 @@ export function Contact() {
 
   return (
     <>
-      <Image
-        src={bgform}
-        alt="Hero"
-        className="absolute w-[100%] z-[-1] h-auto"
+      <video
+        src={require("../public/bg3.mp4")}
+        autoPlay
+        muted
+        loop
+        className="absolute top-0 w-full h-120vh min-h-screen object-cover z-[-1]"
       />
-      <div className="flex relative justify-center justify-items-center ">
+      <div className="flex relative justify-center justify-items-center z-[0]">
         <form
-          className="bg-white p-6 shadow-md  bg-opacity-70 mt-[6rem]"
+          className="bg-white p-6 shadow-md  bg-opacity-70 mt-[6rem] mb-[6rem]"
           onSubmit={handleSubmit}
         >
           <div className="flex flex-col space-y-4">
@@ -175,7 +177,7 @@ export function Contact() {
             </p>
           )}
         </form>
-        <div className="hidden md:block bg-slate-500 bg-opacity-70 space-y-5 p-6 shadow-md mt-[6rem] ">
+        <div className="hidden md:block bg-slate-500 bg-opacity-70 space-y-5 p-6 shadow-md mt-[6rem] mb-[6rem]">
           <h3 className="text-xl font-bold text-white">What Happens Next?</h3>
           <p className="text-gray-200">
             {" "}

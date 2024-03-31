@@ -1,73 +1,102 @@
-import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { CardContent, Card } from "@/components/ui/card";
 import { locations } from "@/constants";
+import Link from "next/link";
 
 export function Locations() {
-  // Function to determine the number of grid columns dynamically
-  const getGridColumns = () => {
-    // Get the window width
-    const windowWidth = window.innerWidth;
-    // Define breakpoints for column count
-    const breakpoints = {
-      sm: 1, // 1 column for small screens
-      md: 3, // 2 columns for medium screens
-      lg: 3, // 3 columns for large screens
-    };
-
-    // Determine the appropriate number of columns based on window width
-    if (windowWidth < 640) {
-      return breakpoints.sm;
-    } else if (windowWidth < 1024) {
-      return breakpoints.md;
-    } else {
-      return breakpoints.lg;
-    }
-  };
-
   return (
-    <div className="w-full overflow-hidden bg-[] border-t border-b pb-[6rem] text-black ">
-      <div className="flex justify-center text-center text-4xl font-bold mt-[4rem] ">
-        With over a decade of experience
-      </div>
-      <div className="flex justify-center text-center text-4xl font-bold">
-        We make it REAL
-      </div>
-      <section className="w-full pt-[4rem] ">
-        <h2 className="text-3xl font-bold text-center md:text-5xl underline">
+    <div className="bg-white p-8">
+      <div className="max-w-7xl mx-auto">
+        <p className="mt-4 text-gray-600 flex justify-center">
+          With over a decade of experience We make it REAL
+        </p>
+        <h2 className="flex justify-center text-3xl font-bold text-gray-900">
           Our Global Presence
         </h2>
-      </section>
-      <section className="container items-center text-center item-center md:mx-auto md:grid md:grid-cols-3 md:pt-[3rem] lg:pt-[5rem] px-4 pt-[1rem] lg:px-16 ">
-        {locations.map((location, index) => (
-          <div key={index} className="flex flex-col mb-2 p-3 ">
-            {location.ishead && <h2 style={{ color: "red" }}>HEADQUARTER</h2>}
-            {!location.ishead && (
-              <h2 style={{ color: "#FDF5DF" }}>HEADQUARTER</h2>
-            )}
-            <h2 className="text-xl font-semibold mb-2">{location.country}</h2>
-            <div className="text-sm text-gray-600">
-              <h2 className="text-xl font-semibold mb-2">{location.city}</h2>
-              <p>
-                <a
-                  className="underline"
-                  href={`tel:${location.phone}`}
-                  target="_blank"
-                >
-                  {location.phone}
-                </a>
-              </p>
-              <p>
-                <a
-                  className="underline"
-                  href={location.directions}
-                  target="_blank"
-                >
-                  DIRECTIONS
-                </a>
-              </p>
+
+        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {locations.map((location, index) => (
+            <div key={index} className="flex flex-col mb-2 p-3">
+              <Card className="bg-[#A7F3D0] p-5">
+                <CardContent>
+                  <h3 className="mt-4 text-lg font-semibold text-gray-900 text-center">
+                    {location.Location_Title}
+                  </h3>
+                  <h3 className="mt-4 text-3xl font-semibold text-gray-900">
+                    {location.city}
+                  </h3>
+                  <p className="mt-2 text-sm text-gray-600">
+                    {location.country}
+                  </p>
+                </CardContent>
+              </Card>
             </div>
-          </div>
-        ))}
-      </section>
+          ))}
+        </div>
+      </div>
     </div>
+  );
+}
+
+function DollarSignIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <line x1="12" x2="12" y1="2" y2="22" />
+      <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+    </svg>
+  );
+}
+
+function HeartIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+    </svg>
+  );
+}
+
+function GroupIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M3 7V5c0-1.1.9-2 2-2h2" />
+      <path d="M17 3h2c1.1 0 2 .9 2 2v2" />
+      <path d="M21 17v2c0 1.1-.9 2-2 2h-2" />
+      <path d="M7 21H5c-1.1 0-2-.9-2-2v-2" />
+      <rect width="7" height="5" x="7" y="7" rx="1" />
+      <rect width="7" height="5" x="10" y="12" rx="1" />
+    </svg>
   );
 }

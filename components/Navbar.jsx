@@ -5,6 +5,7 @@ import { digitalfirst } from "@/constants";
 import MenuIcon from "@mui/icons-material/Menu";
 import { cn } from "@/lib/utils";
 import Button from "@mui/material/Button";
+
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -122,16 +123,12 @@ export function Navbar() {
         <nav className="flex items-center space-x-2 navbar_company ">
           <Link href="/" className="navbar_company flex items-center">
             <div className="hidden md:block">
-              <img
-                src="artboard2.png"
-                alt="Artboard 2"
-                className="h-12 w-[30rem]"
-              />
+              <img src="bg7.png" alt="Artboard 2" className="h-12 w-[23rem]" />
             </div>
           </Link>
           <Link href="/" className="navbar_company flex items-center">
             <div className="md:hidden">
-              <img src="Logo2.png" alt="Logo 2" className="h-14 w-14 mr-2" />
+              <img src="Logo3.png" alt="Logo 2" className="h-14 w-14 mr-2" />
             </div>
           </Link>
         </nav>
@@ -147,7 +144,7 @@ export function Navbar() {
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="/" legacyBehavior passHref>
+                <Link href="/ssp" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Services
                   </NavigationMenuLink>
@@ -182,7 +179,7 @@ export function Navbar() {
             </Link>
 
             <button
-              className={`text-sm font-medium item-center underline-offset-4 ${
+              className={`text-sm font-medium z-[1] item-center underline-offset-4 ${
                 isHovering || isclikk ? "text-red-600 font-bold" : ""
               }`}
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -190,7 +187,7 @@ export function Navbar() {
               <MenuIcon sx={{ color: "goldenrod", fontSize: "40px" }} />
             </button>
             {isDropdownOpen && (
-              <div className="absolute top-full right-0 mt-2 w-40 bg-white shadow-lg">
+              <div className="absolute top-full right-0 mt-2 w-40 bg-white shadow-lg z-0">
                 <div className="flex flex-col">
                   <Link
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
@@ -204,33 +201,12 @@ export function Navbar() {
                   >
                     About
                   </Link>
-                  <div className="relative">
-                    <button
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      onClick={() =>
-                        setIsServiceSubMenuOpen(!isServiceSubMenuOpen)
-                      }
-                    >
-                      Services
-                    </button>
-                    {isServiceSubMenuOpen && (
-                      <div className="absolute top-0 right-full mt-0 ml-2 w-40 bg-white shadow-lg">
-                        {digitalfirst.map((item) => (
-                          <div key={item.title}>
-                            {item.links.map((link) => (
-                              <Link
-                                key={link.title}
-                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                href={link.url}
-                              >
-                                {link.title}
-                              </Link>
-                            ))}
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </div>
+                  <Link
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    href="/ssp"
+                  >
+                    Services
+                  </Link>
                 </div>
               </div>
             )}

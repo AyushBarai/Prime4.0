@@ -15,7 +15,7 @@ export const digitalfirst = [
   {
     title: "Digital First",
     links: [
-      { title: "Automated Ops", url: "./sp/intelopspage" },
+      { title: "Banking", url: "./sp/intelopspage" },
       { title: "Hybrid Cloud Services", url: "./sp/hybridpage" },
       { title: "Networks", url: "./sp/networkpage" },
       { title: "Digital Workplace", url: "./sp/digitalpage" },
@@ -23,6 +23,9 @@ export const digitalfirst = [
       { title: "Industrial IoT", url: "./sp/industrial" },
       { title: "Service Management", url: "./sp/management" },
       { title: "Application Services", url: "./sp/applicationpage" },
+      { title: "Consulting Services", url: "./sp/consulting" },
+      { title: "Consulting Services", url: "./sp/consulting" },
+      { title: "Consulting Services", url: "./sp/consulting" },
       { title: "Consulting Services", url: "./sp/consulting" },
     ],
   },
@@ -104,28 +107,28 @@ export const servicelink = [
 
 export const locations = [
   {
-    ishead: false,
+    Location_Title: "Corporate Office",
     Continent: "Asia",
     country: "Saudi Arabia",
     city: "Riyadh",
     phone: "",
-    url: "/",
+    url: "/riyadh.jpg",
   },
   {
-    ishead: true,
+    Location_Title: "Headquarters",
     Continent: "Asia",
     country: "United Arab Emirates",
     city: "Dubai",
     phone: "",
-    url: "/",
+    url: "/dubai.jpg",
   },
   {
-    ishead: false,
+    Location_Title: "-",
     Continent: "Asia",
     country: "India",
     city: "Bengaluru",
     phone: "",
-    url: "/",
+    url: "/bangalore.png",
   },
 ];
 

@@ -11,8 +11,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import {Cards} from "@/components/Cards"
-import { Myservice } from "./myservice";
+import { Servicescard } from "@/components/Servicescard";
 
 export function Hero() {
   return (
@@ -221,12 +220,19 @@ export function Hero() {
           </div>
       
         </section> */}
-        <Myservice></Myservice>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-emerald-800">
+        <Servicescard />
+        <section
+          className="w-full py-12 md:py-24 lg:py-32 xl:py-48 relative z-[-1]"
+          style={{
+            backgroundImage: 'url("/bg8.jpg")',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
           <div className=" grid items-center justify-center gap-4 px-4 text-center md:px-6">
             <div className="space-y-3">
               <h2 className="text-2xl font-bold text-center sm:text-5xl md:text-6xl/none mx-auto max-w-[1100px] text-white uppercase bg-green">
-                Innovative solutions to inspire for the better
+                Innovative solutions for better Future
               </h2>
             </div>
           </div>

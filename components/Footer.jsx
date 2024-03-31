@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 import {
   FaDribbbleSquare,
   FaFacebookSquare,
@@ -52,10 +53,10 @@ const items = [
 
 export function Footer() {
   return (
-    <div className="bg-[#000300] mx-auto py-16 px-4 flex flex-col justify-center items-center md:grid lg:grid-cols-3 gap-8 text-gray-300 text-wrap overflow-hidden ">
+    <div className="bg-[#000300] mx-auto py-12 px-4 flex flex-col justify-center items-center md:grid lg:grid-cols-3 gap-4 text-gray-300 text-wrap overflow-hidden ">
       {/* Left section with brand and social icons */}
 
-      <div className="lg:col-span-2 flex justify-start gap-5 mt-6">
+      <div className="lg:col-span-1 flex justify-start gap-4 mt-1">
         {/* Mapping over sections and rendering content */}
         {items.map((item, index) =>
           item.type === "section" ? (
@@ -80,7 +81,6 @@ export function Footer() {
         <h1 className="w-full text-3xl lg:text-4xl xl:text-5xl font-bold text-[#00df9a]">
           PRIME GROUPS.
         </h1>
-        <p className="py-4">Innovate Initiate and Inspire</p>
         <div className="flex justify-between md:w-[75%] my-6">
           {/* Mapping over social icons and rendering the SocialIcon component */}
           {items.map((item, index) =>
@@ -89,11 +89,17 @@ export function Footer() {
             ) : null
           )}
         </div>
-      </div>
-      <div className="w-[400px] flex flex-col items-start justify-start pt-[11px] px-0 pb-0 box-border">
-        <div className="self-stretch relative tracking-[-0.01em] leading-[24px]">
+        <div className="self-stretch relative tracking-[-0.01em] leading-[10px]">
           © Prime Groups, Inc. 2024. We love our users!
         </div>
+      </div>
+      <div>
+        <Image
+          src="/FooterRRR.png"
+          width={1000}
+          height={1000}
+          className="justify-end w-[100vh] h-auto"
+        />
       </div>
     </div>
   );
