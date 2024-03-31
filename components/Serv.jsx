@@ -17,17 +17,22 @@ export function Serv() {
             you covered.
           </p>
         </div>
+        {/* items start
+        ffffffffffffffffffffffffff
+        ffffffffffffffffffffff
+        fffffffffffffffffff
+        */}
         <div
           className="mx-auto grid max-w-sm items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
           <div className="flex flex-col items-center gap-2">
             <div
-              className="flex items-center justify-center w-16 h-16 rounded-full border border-gray-200 border-gray-200">
+              className="flex items-center justify-center w-16 h-16 rounded-full border border-gray-200 ">
               <AccessibilityIcon className="w-8 h-8" />
             </div>
             <div className="space-y-2 text-center">
-              <h3 className="text-xl font-bold">Consulting</h3>
+              <h3 className="text-xl font-bold">Banking</h3>
               <p className="text-sm text-gray-500 dark:text-gray-400">
-                Expert advice to help you make the right decisions for your business.
+              Tailored financial solutions for modern banking needs.
               </p>
             </div>
             <Button className="mx-auto w-full max-w-[150px]" size="sm" variant="outline">
@@ -40,24 +45,26 @@ export function Serv() {
               <CodeIcon className="w-8 h-8" />
             </div>
             <div className="space-y-2 text-center">
-              <h3 className="text-xl font-bold">Development</h3>
+              <h3 className="text-xl font-bold">Cyber Security</h3>
               <p className="text-sm text-gray-500 dark:text-gray-400">
-                Custom solutions to help your business thrive in the digital age.
+              Protecting your digital assets with cutting-edge defense strategies.
               </p>
             </div>
             <Button className="mx-auto w-full max-w-[150px]" size="sm" variant="outline">
               Learn More
             </Button>
           </div>
+
+          
           <div className="flex flex-col items-center gap-2">
             <div
               className="flex items-center justify-center w-16 h-16 rounded-full border border-gray-200 border-gray-200">
               <DatabaseIcon className="w-8 h-8" />
             </div>
             <div className="space-y-2 text-center">
-              <h3 className="text-xl font-bold">Data Analysis</h3>
+              <h3 className="text-xl font-bold">Networking & Telecom</h3>
               <p className="text-sm text-gray-500 dark:text-gray-400">
-                Insights to help you understand your customers and grow your business.
+              Building reliable connections for seamless communication.
               </p>
             </div>
             <Button className="mx-auto w-full max-w-[150px]" size="sm" variant="outline">
@@ -70,15 +77,16 @@ export function Serv() {
               <ComponentIcon className="w-8 h-8" />
             </div>
             <div className="space-y-2 text-center">
-              <h3 className="text-xl font-bold">Design</h3>
+              <h3 className="text-xl font-bold">Retail Industry</h3>
               <p className="text-sm text-gray-500 dark:text-gray-400">
-                Beautiful and intuitive user experiences that set your business apart.
+               Elevating retail experiences through innovative solutions.
               </p>
             </div>
             <Button className="mx-auto w-full max-w-[150px]" size="sm" variant="outline">
               Learn More
             </Button>
           </div>
+
           <div className="flex flex-col items-center gap-2">
             <div
               className="flex items-center justify-center w-16 h-16 rounded-full border border-gray-200 border-gray-200">
@@ -87,7 +95,7 @@ export function Serv() {
             <div className="space-y-2 text-center">
               <h3 className="text-xl font-bold">Cloud Services</h3>
               <p className="text-sm text-gray-500 dark:text-gray-400">
-                Scalable and secure infrastructure to power your applications.
+              Empowering businesses with scalable and flexible cloud solutions.
               </p>
             </div>
             <Button className="mx-auto w-full max-w-[150px]" size="sm" variant="outline">
@@ -100,16 +108,114 @@ export function Serv() {
               <MenuIcon className="w-8 h-8" />
             </div>
             <div className="space-y-2 text-center">
-              <h3 className="text-xl font-bold">Integration</h3>
+              <h3 className="text-xl font-bold">Manufacturing</h3>
               <p className="text-sm text-gray-500 dark:text-gray-400">
-                Connect your systems for seamless workflows and better collaboration.
+              Streamlining operations and optimizing production processes
               </p>
             </div>
             <Button className="mx-auto w-full max-w-[150px]" size="sm" variant="outline">
               Learn More
             </Button>
           </div>
+
+          <div className="flex flex-col items-center gap-2">
+            <div
+              className="flex items-center justify-center w-16 h-16 rounded-full border border-gray-200 ">
+              <AccessibilityIcon className="w-8 h-8" />
+            </div>
+            <div className="space-y-2 text-center">
+              <h3 className="text-xl font-bold">Customer relations</h3>
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+              Enhancing customer engagement through personalized interactions.
+              </p>
+            </div>
+            <Button className="mx-auto w-full max-w-[150px]" size="sm" variant="outline">
+              Learn More
+            </Button>
+          </div>
+          {/* item */}
+          <div className="flex flex-col items-center gap-2">
+            <div
+              className="flex items-center justify-center w-16 h-16 rounded-full border border-gray-200 ">
+              <AccessibilityIcon className="w-8 h-8" />
+            </div>
+            <div className="space-y-2 text-center">
+              <h3 className="text-xl font-bold">SAP</h3>
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+              Integrated software solutions for efficient business management.
+              </p>
+            </div>
+            <Button className="mx-auto w-full max-w-[150px]" size="sm" variant="outline">
+              Learn More
+            </Button>
+          </div>
+          {/* item */}
+
+          <div className="flex flex-col items-center gap-2">
+            <div
+              className="flex items-center justify-center w-16 h-16 rounded-full border border-gray-200 ">
+              <AccessibilityIcon className="w-8 h-8" />
+            </div>
+            <div className="space-y-2 text-center">
+              <h3 className="text-xl font-bold">Automated OPS</h3>
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+              Optimizing workflows through automated operational processes.
+              </p>
+            </div>
+            <Button className="mx-auto w-full max-w-[150px]" size="sm" variant="outline">
+              Learn More
+            </Button>
+          </div>
+          <div className="flex flex-col items-center gap-2">
+            <div
+              className="flex items-center justify-center w-16 h-16 rounded-full border border-gray-200 ">
+              <AccessibilityIcon className="w-8 h-8" />
+            </div>
+            <div className="space-y-2 text-center">
+              <h3 className="text-xl font-bold">Digital Workspace</h3>
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+              Transforming work environments for enhanced productivity and collaboration.
+              </p>
+            </div>
+            <Button className="mx-auto w-full max-w-[150px]" size="sm" variant="outline">
+              Learn More
+            </Button>
+          </div><div className="flex flex-col items-center gap-2">
+            <div
+              className="flex items-center justify-center w-16 h-16 rounded-full border border-gray-200 ">
+              <AccessibilityIcon className="w-8 h-8" />
+            </div>
+            <div className="space-y-2 text-center">
+              <h3 className="text-xl font-bold">Service Management</h3>
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+              Ensuring IT services align with business objectives for optimal performance.
+              </p>
+            </div>
+            <Button className="mx-auto w-full max-w-[150px]" size="sm" variant="outline">
+              Learn More
+            </Button>
+          </div><div className="flex flex-col items-center gap-2">
+            <div
+              className="flex items-center justify-center w-16 h-16 rounded-full border border-gray-200 ">
+              <AccessibilityIcon className="w-8 h-8" />
+            </div>
+            <div className="space-y-2 text-center">
+              <h3 className="text-xl font-bold">Consulting</h3>
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+              Strategic guidance and expertise to drive business success.
+              </p>
+            </div>
+            <Button className="mx-auto w-full max-w-[150px]" size="sm" variant="outline">
+              Learn More
+            </Button>
+          </div>
+          
+
         </div>
+        {/* add above this */}
+
+        
+        
       </div>
     </section>)
   );

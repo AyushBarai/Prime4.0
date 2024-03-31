@@ -7,8 +7,8 @@ import { Myservice } from "@/components/myservice";
 export default function Ssp() {
   return (
     <div>
-        <Serv></Serv>
-        <Dessrevice></Dessrevice>
+        <Serv/>
+        <Dessrevice/>
       
     </div>
   );

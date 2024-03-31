@@ -14,15 +14,15 @@ export function Dessrevice() {
         </div>
       </div>
     </div>
-    <section className="py-12 lg:py-24">
+  <div className="flex flex-col md:flex-row md:justify-center md:space-x-5">
+    <section className="py-12 lg:py-24 flex flex-col">
       <div
-        className="container grid items-center gap-4 px-4 md:px-6 lg:grid-cols-[1fr_700px] lg:gap-10 bg-gray-500/30 rounded-lg p-20 py-52">
+        className="container items-center gap-4 px-4 md:px-6  lg:gap-10 bg-gray-500/30 rounded-lg p-20 py-52 flex flex-col">
         <div className="space-y-2 ">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Managed IT Services</h2>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Banking</h2>
           <p
             className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-            Focus on your business while we take care of your IT. Our managed services include 24/7 monitoring,
-            helpdesk support, and proactive maintenance.
+             Prime Group Technologies provides tailored solutions for the banking sector, including core banking systems, digital banking platforms, risk management tools, compliance solutions, and consulting services, enabling banks to enhance operational efficiency, improve customer experience, and ensure regulatory compliance.
           </p>
         </div>
         <Card className="w-full max-w-sm mx-auto border none">
@@ -32,15 +32,16 @@ export function Dessrevice() {
         </Card>
       </div>
     </section>
-    <section className="py-12 lg:py-24">
+    <section className="py-12 lg:py-24 flex flex-col">
       <div
-        className="container grid items-center gap-4 px-4 md:px-6 lg:grid-cols-[1fr_700px] lg:gap-10 bg-stone-300 p-20 py-52">
+        className="container items-center gap-4 px-4  lg:gap-10 bg-stone-300 rounded-lg  p-20 py-52 flex flex-col">
         <div className="space-y-2">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Cloud Solutions</h2>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">CyberSecurity</h2>
           <p
             className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-            Embrace the cloud with confidence. We offer cloud migration, architecture design, and management services
-            to help you leverage the power of the cloud.
+             With advanced cybersecurity solutions, Prime Group Technologies helps organizations safeguard against cyber threats, offering services such as threat detection, incident response, vulnerability assessments, security audits, and employee training to protect sensitive data and maintain business continuity.
+
+
           </p>
         </div>
         <Card className="w-full max-w-sm mx-auto border none">
@@ -50,42 +51,204 @@ export function Dessrevice() {
         </Card>
       </div>
     </section>
-    <section className="py-12 lg:py-24">
+  </div>
+  {/* invert colorsss
+  ssssssssssssssssss
+  sssssssssss */}
+
+<div className="flex flex-col md:flex-row md:justify-center md:space-x-5 ">
+    <section className="py-12 lg:py-24 flex flex-col">
       <div
-        className="container grid items-center gap-4 px-4 md:px-6 lg:grid-cols-[1fr_700px] lg:gap-10 bg-gray-500/30 rounded-lg p-20 py-52">
-        <div className="space-y-2">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Cybersecurity</h2>
+        className="container items-center gap-4 px-4 md:px-6  lg:gap-10  bg-stone-300 rounded-lg p-20 py-52 flex flex-col">
+        <div className="space-y-2 ">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Networking and Telecom</h2>
           <p
             className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-            Protect your business from cyber threats. Our cybersecurity services include risk assessment, security
-            awareness training, and endpoint protection.
+             Prime Group Technologies offers networking and telecommunications solutions, including network design, implementation, optimization, and management services, as well as telecom infrastructure setup, maintenance, and support, ensuring reliable connectivity and seamless communication for businesses.
           </p>
         </div>
         <Card className="w-full max-w-sm mx-auto border none">
           <CardContent className="p-4">
-            <ShieldCheckIcon className="mx-auto h-8 w-8" />
+            <ServerIcon className="mx-auto h-8 w-8" />
           </CardContent>
         </Card>
       </div>
     </section>
-    <section className="py-12 lg:py-24">
+    <section className="py-12 lg:py-24 flex flex-col">
       <div
-        className="container grid items-center gap-4 px-4 md:px-6 lg:grid-cols-[1fr_700px] lg:gap-10 bg-stone-300 p-20 py-52">
+        className="container items-center gap-4 px-4  lg:gap-10 bg-gray-500/30 rounded-lg p-20 py-52 flex flex-col">
         <div className="space-y-2">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">IT Consulting</h2>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Retail Industry</h2>
           <p
             className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-            Get expert advice on your IT strategy. Our consulting services cover digital transformation,
-            infrastructure planning, and workflow optimization.
+             Catering to the retail sector, Prime Group Technologies delivers solutions such as point-of-sale systems, inventory management software, customer analytics tools, e-commerce platforms, and omnichannel integration services, enabling retailers to optimize operations, enhance customer engagement, and drive sales growth.
           </p>
         </div>
         <Card className="w-full max-w-sm mx-auto border none">
           <CardContent className="p-4">
-            <LightbulbIcon className="mx-auto h-8 w-8" />
+            <CloudIcon className="mx-auto h-8 w-8" />
           </CardContent>
         </Card>
       </div>
     </section>
+  </div>
+  {/* ssssssssssssssssssssssssssss
+  sssssssssssssssssssssssssssss */}
+    <div className="flex flex-col md:flex-row md:justify-center md:space-x-5">
+    <section className="py-12 lg:py-24 flex flex-col">
+      <div
+        className="container items-center gap-4 px-4 md:px-6  lg:gap-10 bg-gray-500/30 rounded-lg p-20 py-52 flex flex-col">
+        <div className="space-y-2 ">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Manufacturing</h2>
+          <p
+            className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+            Prime Group Technologies provides manufacturing solutions encompassing production planning, inventory management, supply chain optimization, quality control, and asset management systems, empowering manufacturers to increase efficiency, reduce costs, and maintain high product quality.<p className="text-gray-500/0">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+          </p>
+        </div>
+        <Card className="w-full max-w-sm mx-auto border none">
+          <CardContent className="p-4">
+            <ServerIcon className="mx-auto h-8 w-8" />
+          </CardContent>
+        </Card>
+      </div>
+    </section>
+    <section className="py-12 lg:py-24 flex flex-col">
+      <div
+        className="container items-center gap-4 px-4  lg:gap-10 bg-stone-300 rounded-lg p-20 py-52 flex flex-col">
+        <div className="space-y-2">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Cloud Services</h2>
+          <p
+            className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+            Offering cloud solutions tailored to specific business needs, Prime Group Technologies facilitates cloud migration, infrastructure setup, data storage, backup, and disaster recovery services, enabling organizations to leverage the scalability, flexibility, and cost-effectiveness of cloud computing.
+          </p>
+        </div>
+        <Card className="w-full max-w-sm mx-auto border none">
+          <CardContent className="p-4">
+            <CloudIcon className="mx-auto h-8 w-8" />
+          </CardContent>
+        </Card>
+      </div>
+    </section>
+  </div>
+
+  <div className="flex flex-col md:flex-row md:justify-center md:space-x-5 ">
+    <section className="py-12 lg:py-24 flex flex-col">
+      <div
+        className="container items-center gap-4 px-4 md:px-6  lg:gap-10  bg-stone-300 rounded-lg p-20 py-52 flex flex-col">
+        <div className="space-y-2 ">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Customer Relationship Management</h2>
+          <p
+            className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+           Prime Group Technologies delivers CRM solutions that enable businesses to manage customer interactions, track sales leads, automate marketing campaigns, and analyze customer data, fostering stronger relationships, improving customer satisfaction, and driving sales growth.
+          </p>
+        </div>
+        <Card className="w-full max-w-sm mx-auto border none">
+          <CardContent className="p-4">
+            <ServerIcon className="mx-auto h-8 w-8" />
+          </CardContent>
+        </Card>
+      </div>
+    </section>
+    <section className="py-12 lg:py-24 flex flex-col">
+      <div
+        className="container items-center gap-4 px-4  lg:gap-10 rounded-lg bg-gray-500/30 p-20 py-52 flex flex-col">
+        <div className="space-y-2">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">SAP</h2>
+          <p
+            className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+             Prime Group Technologies specializes in SAP implementation, customization, integration, and support services, helping businesses leverage SAP's suite of enterprise resource planning (ERP) solutions to streamline operations, optimize processes, and achieve business objectives.
+          </p>
+        </div>
+        <Card className="w-full max-w-sm mx-auto border none">
+          <CardContent className="p-4">
+            <CloudIcon className="mx-auto h-8 w-8" />
+          </CardContent>
+        </Card>
+      </div>
+    </section>
+  </div>
+
+  {/* sssssssssssssssss
+  sssssssssssssssssssssss
+  ssssssssssssss */}
+  <div className="flex flex-col md:flex-row md:justify-center md:space-x-5">
+    <section className="py-12 lg:py-24 flex flex-col">
+      <div
+        className="container items-center gap-4 px-4 md:px-6  lg:gap-10 bg-gray-500/30 rounded-lg p-20 py-52 flex flex-col">
+        <div className="space-y-2 ">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Automated Ops</h2>
+          <p
+            className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+            Prime Group Technologies offers automated operations solutions, including robotic process automation (RPA), AI-driven automation, and workflow orchestration tools, to streamline repetitive tasks, improve efficiency, and reduce operational costs for businesses.
+          </p>
+        </div>
+        <Card className="w-full max-w-sm mx-auto border none">
+          <CardContent className="p-4">
+            <ServerIcon className="mx-auto h-8 w-8" />
+          </CardContent>
+        </Card>
+      </div>
+    </section>
+    <section className="py-12 lg:py-24 flex flex-col">
+      <div
+        className="container items-center gap-4 px-4  lg:gap-10 bg-stone-300 rounded-lg p-20 py-52 flex flex-col">
+        <div className="space-y-2">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Digital Workspace</h2>
+          <p
+            className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+            Providing digital workspace solutions, Prime Group Technologies enables organizations to create collaborative, flexible, and secure work environments, integrating tools for remote work, document collaboration, virtual meetings, and employee productivity enhancement.
+          </p>
+        </div>
+        <Card className="w-full max-w-sm mx-auto border none">
+          <CardContent className="p-4">
+            <CloudIcon className="mx-auto h-8 w-8" />
+          </CardContent>
+        </Card>
+      </div>
+    </section>
+  </div>
+  {/* sssssssssssssssssssssssssssss
+  sssssssssssssssssssssss */}
+  <div className="flex flex-col md:flex-row md:justify-center md:space-x-5 ">
+    <section className="py-12 lg:py-24 flex flex-col">
+      <div
+        className="container items-center gap-4 px-4 md:px-6  lg:gap-10  bg-stone-300 rounded-lg p-20 py-52 flex flex-col">
+        <div className="space-y-2 ">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Service Management</h2>
+          <p
+            className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+            Prime Group Technologies delivers IT service management solutions to optimize IT processes, automate service delivery, track IT assets, and ensure compliance with ITIL best practices, enhancing the efficiency and reliability of IT operations.
+          </p>
+        </div>
+        <Card className="w-full max-w-sm mx-auto border none">
+          <CardContent className="p-4">
+            <ServerIcon className="mx-auto h-8 w-8" />
+          </CardContent>
+        </Card>
+      </div>
+    </section>
+    <section className="py-12 lg:py-24 flex flex-col">
+      <div
+        className="container items-center gap-4 px-4  lg:gap-10 bg-gray-500/30 rounded-lg p-20 py-52 flex flex-col">
+        <div className="space-y-2">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Consulting Services</h2>
+          <p
+            className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+            With a team of experienced consultants, Prime Group Technologies offers strategic consulting services to help businesses identify opportunities, overcome challenges, and achieve their goals through technology adoption, process optimization, and organizational transformation.
+          </p>
+        </div>
+        <Card className="w-full max-w-sm mx-auto border none">
+          <CardContent className="p-4">
+            <CloudIcon className="mx-auto h-8 w-8" />
+          </CardContent>
+        </Card>
+      </div>
+    </section>
+  </div>
+
+  
+  
+    
   </>);
 }
 
