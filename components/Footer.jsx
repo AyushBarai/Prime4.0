@@ -35,7 +35,7 @@ const items = [
   },
   {
     type: "section",
-    title: "Digital First",
+    title: "Our Service Offerings",
     items: [
       "Automated Ops",
       "Hybrid Cloud Services",
